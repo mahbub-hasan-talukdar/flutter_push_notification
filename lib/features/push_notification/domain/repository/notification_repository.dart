@@ -1,5 +1,5 @@
-import 'package:flutter_push_notification/push_notification/data/data_source/notification_data_source.dart';
-import 'package:flutter_push_notification/push_notification/data/repository/notification_repo_imp.dart';
+import 'package:flutter_push_notification/features/push_notification/data/data_source/notification_data_source.dart';
+import 'package:flutter_push_notification/features/push_notification/data/repository/notification_repo_imp.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

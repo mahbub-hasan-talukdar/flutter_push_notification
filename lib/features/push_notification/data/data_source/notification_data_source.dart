@@ -1,10 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter/foundation.dart';
 
 class NotificationDataSource {
   FirebaseMessaging messaging = FirebaseMessaging.instance;
-  FlutterLocalNotificationsPlugin _notificationsPlugin =
-      FlutterLocalNotificationsPlugin();
   void requestNotificationPermission() async {
     NotificationSettings settings = await messaging.requestPermission(
       alert: true,
@@ -16,7 +14,9 @@ class NotificationDataSource {
       sound: true,
     );
 
-    print('User granted permission: ${settings.authorizationStatus}');
+    if (kDebugMode) {
+      print('User granted permission: ${settings.authorizationStatus}');
+    }
   }
 
   Future<void> setupInteractedMessage() async {
@@ -30,30 +30,38 @@ class NotificationDataSource {
     FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print('Got a message whilst in the foreground!');
-      print('Message data: ${message.data}');
-      if (message.notification != null) {
-        print('Message also contained a notification: ${message.notification}');
+      if (kDebugMode) {
+        print('In foreground!');
+        print('Message data: ${message.data}');
+        if (message.notification != null) {
+          print(
+              'Message also contained a notification: ${message.notification}');
+        }
       }
     });
   }
 
   void _handleMessage(RemoteMessage message) {
-    print("${message.toString()}");
-    if (message.data['type'] == 'chat') {
-      print('message body: ');
-      print(message.notification!.title);
+    if (kDebugMode) {
+      print(message.toString());
+      if (message.data['type'] == 'chat') {
+        print('message body: ');
+        print(message.notification!.title);
+      }
     }
   }
 
   Future<String?> getDeviceToken() async {
-    print('in data');
     try {
       String? token = await messaging.getToken();
-      print(token);
+      if (kDebugMode) {
+        print(token);
+      }
       return token;
     } catch (e) {
-      print("Error getting token: $e");
+      if (kDebugMode) {
+        print("Error getting token: $e");
+      }
       return null;
     }
   }

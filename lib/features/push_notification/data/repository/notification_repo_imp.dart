@@ -1,5 +1,5 @@
-import 'package:flutter_push_notification/push_notification/data/data_source/notification_data_source.dart';
-import 'package:flutter_push_notification/push_notification/domain/repository/notification_repository.dart';
+import 'package:flutter_push_notification/features/push_notification/data/data_source/notification_data_source.dart';
+import 'package:flutter_push_notification/features/push_notification/domain/repository/notification_repository.dart';
 
 class NotificationRepoImp implements NotificationRepo {
   NotificationDataSource notificationDataSource;

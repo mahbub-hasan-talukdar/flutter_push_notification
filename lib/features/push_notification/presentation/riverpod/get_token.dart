@@ -1,4 +1,4 @@
-import 'package:flutter_push_notification/push_notification/domain/use_case/notification_use_case.dart';
+import 'package:flutter_push_notification/features/push_notification/domain/use_case/notification_use_case.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'get_token.g.dart';

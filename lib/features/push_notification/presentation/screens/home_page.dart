@@ -1,9 +1,9 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_push_notification/push_notification/domain/use_case/notification_use_case.dart';
-import 'package:flutter_push_notification/push_notification/presentation/riverpod/device_permission.dart';
-import 'package:flutter_push_notification/push_notification/presentation/riverpod/get_token.dart';
-import 'package:flutter_push_notification/push_notification/presentation/riverpod/notification_controller.dart';
+import 'package:flutter_push_notification/features/push_notification/domain/use_case/notification_use_case.dart';
+import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/device_permission.dart';
+import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/get_token.dart';
+import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/notification_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerStatefulWidget {

@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter_push_notification/push_notification/domain/entity/notification_entity.dart';
-import 'package:flutter_push_notification/push_notification/domain/repository/notification_repository.dart';
+import 'package:flutter_push_notification/features/push_notification/domain/entity/notification_entity.dart';
+import 'package:flutter_push_notification/features/push_notification/domain/repository/notification_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
