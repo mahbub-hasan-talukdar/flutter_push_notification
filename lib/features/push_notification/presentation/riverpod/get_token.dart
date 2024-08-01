@@ -14,6 +14,7 @@ class GetToken extends _$GetToken {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       ref.read(notificationUseCaseProvider).getToken();
+      return null;
     });
   }
 }

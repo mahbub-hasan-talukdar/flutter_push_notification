@@ -1,5 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_push_notification/config/firebase_config.dart';
 import 'package:flutter_push_notification/features/push_notification/presentation/screens/home_page.dart';

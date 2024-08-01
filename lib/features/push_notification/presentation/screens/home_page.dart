@@ -1,6 +1,4 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_push_notification/features/push_notification/domain/use_case/notification_use_case.dart';
 import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/device_permission.dart';
 import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/get_token.dart';
 import 'package:flutter_push_notification/features/push_notification/presentation/riverpod/notification_controller.dart';
@@ -32,7 +30,7 @@ class _HomePageState extends ConsumerState<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('This is Home page'),
+        title: const Text('This is Home page'),
       ),
     );
   }
